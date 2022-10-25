@@ -123,7 +123,7 @@ namespace BetterPawnControl
             //get all links from the selected zone
             zoneLinks = mapLinks.FindAll(x => x != null &&  x.zone == policy.id);
 
-            foreach (Pawn p in pawns)
+            foreach (Pawn p in pawns.ToArray())
             {
                 foreach (AnimalLink l in zoneLinks)
                 {
